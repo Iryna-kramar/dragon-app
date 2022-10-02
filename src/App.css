@@ -10,6 +10,16 @@
   min-height: 100vh;
   background-color: var(--color-black);
 }
+.app__wrapper-white {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  align-items: center;
+  padding: 4rem;
+
+  min-height: 100vh;
+  background-color: var(--color-white);
+}
 
 .app__header-img img {
   width: 80%;
@@ -49,6 +59,40 @@
   height: 100%;
 }
 
+.app__button-black {
+  position: relative;
+  font-family: var(--font-base);
+  overflow: hidden;
+  margin: 10px;
+  padding: 10px 20px;
+  border: 2px solid var(--color-black);;
+  background: var(--color-black);
+  font-size: 20px;
+  color: var(--color-white);
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+.app__button-black:before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 0%;
+  z-index: -1;
+}
+
+.app__button-black:hover {
+  color: var(--color-black);
+  background: var(--color-white);
+  transition: 0.5s;
+}
+
+.app__button-black:hover:before {
+  top: 0;
+  height: 100%;
+}
+
 .p__cormorant {
   font-family: var(--font-base);
   color: var(--color-white);
@@ -72,6 +116,7 @@
 
 @media screen and (min-width: 2000px) {
   .app__button,
+  .app__button-black,
   .app__text {
     font-size: 30px;
     line-height: 50px;
@@ -79,22 +124,26 @@
 }
 
 @media screen and (max-width: 1150px) {
-  .app__wrapper {
+  .app__wrapper,
+  .app__wrapper-white  {
     flex-direction: column;
   }
 }
 
 @media screen and (max-width: 850px) {
-  .app__wrapper {
+  .app__wrapper,
+  .app__wrapper-white  {
     padding: 4rem;
   }
 }
 
 @media screen and (max-width: 650px) {
-  .app__wrapper {
+  .app__wrapper,
+  .app__wrapper-white  {
     padding: 4rem 2rem;
   }
   .app__button,
+  .app__button-black,
   .app__text {
     font-size: 14px;
   }
@@ -102,6 +151,7 @@
 
 @media screen and (max-width: 450px) {
   .app__button,
+  .app__button-black,
   .app__text {
     font-size: 12px;
   }

@@ -1,7 +1,5 @@
-import SubHeading from './SubHeading/SubHeading';
-import Navbar from './Navbar/Navbar';
+import Navbar from "./Navbar/Navbar";
+import Login from "./Login_Register/Login";
+import Register from "./Login_Register/Register";
 
-export {
-  SubHeading,
-  Navbar,
-};
+export { Navbar, Login, Register };

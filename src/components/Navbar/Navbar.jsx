@@ -8,10 +8,12 @@ const Navbar = () => {
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
-        <img src={Logo} alt="app logo" />
+        <Link to="/">
+          <img src={Logo} alt="app logo" />
+        </Link>
       </div>
       <Link className="app__navbar-login app__text" to="/login">
-          Log in / Register
+        Log in / Register
       </Link>
     </nav>
   );

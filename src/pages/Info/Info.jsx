@@ -27,14 +27,14 @@ const Info = () => {
             </button>
           </a>
           <Link className="link" to={`/${id}/details`}>
-              <button type="button" className="app__button">
-                Details
-              </button>
-            </Link>
+            <button type="button" className="app__button">
+              Details
+            </button>
+          </Link>
         </div>
         <div className="app__wrapper_img">
-            <img src={firstImage} alt="dragon1" />
-          </div>
+          <img src={firstImage} alt="dragon1" />
+        </div>
       </div>
     </div>
   );
