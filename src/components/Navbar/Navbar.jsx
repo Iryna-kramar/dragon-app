@@ -1,20 +1,18 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
-import Logo from "../../assets/SpaceX-White-Logo.svg"
+import Logo from "../../assets/SpaceX-White-Logo.svg";
 
 const Navbar = () => {
-
   return (
     <nav className="app__navbar">
       <div className="app__navbar-logo">
         <img src={Logo} alt="app logo" />
       </div>
-      <div className="app__navbar-login">
-        <a href="#login" className="app__text">
+      <Link className="app__navbar-login app__text" to="/login">
           Log in / Register
-        </a>
-      </div>
+      </Link>
     </nav>
   );
 };

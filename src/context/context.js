@@ -1,12 +1,15 @@
 import React, { useState } from "react";
+import { useParams } from "react-router-dom";
 
 const DragonContext = React.createContext();
 
 const DragonProvider = ({ children }) => {
-  const [data, setData] = useState([]);
+  const [dragons, setDragons] = useState([]);
+  const [dragon, setDragon] = useState([]);
   const [images, setImages] = useState([]);
+  const [firstImage, setFirstImage] = useState([]);
 
-  let dragon1Url = 'https://api.spacexdata.com/v4/dragons/5e9d058759b1ff74a7ad5f8f';
+  let dragon1Url = "https://api.spacexdata.com/v4/dragons";
 
   const fetchData = async (url, options) => {
     const response = await fetch(url, options);
@@ -14,23 +17,38 @@ const DragonProvider = ({ children }) => {
     return data;
   };
 
-  const fetchDragonData = async () => {
+  const fetchDragonsData = async () => {
     const allData = await fetchData(`${dragon1Url}`, {
       method: "GET",
     });
-    setData(allData);
-    setImages(allData.flickr_images)
+    setDragons(allData);
   };
 
-  console.log (data, 'data')
+  console.log(dragons, "data");
+
+  const fetchDragonData = async (id) => {
+    const dragonData = await fetchData(
+      `https://api.spacexdata.com/v4/dragons/${id}`,
+      {
+        method: "GET",
+      }
+    );
+    setDragon(dragonData);
+    setFirstImage(dragonData.flickr_images[0]);
+    setImages(dragonData.flickr_images);    
+  };
 
   return (
     <DragonContext.Provider
       value={{
-        data,
+        dragons,
+        dragon1Url,
+        dragon,
         images,
+        firstImage,
         fetchData,
-        fetchDragonData,
+        fetchDragonsData,
+        fetchDragonData
       }}
     >
       {children}

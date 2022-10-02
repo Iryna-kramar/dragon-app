@@ -17,6 +17,8 @@ const Gallery = () => {
     }
   };
 
+  console.log(images, 'dragon')
+
   return (
     <div className="app__gallery app__wrapper">
       <div className="app__gallery-images">
