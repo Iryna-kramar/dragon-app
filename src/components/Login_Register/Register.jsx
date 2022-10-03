@@ -4,7 +4,7 @@ import { useNavigate, Link } from "react-router-dom";
 import "./Login_Register.css";
 
 const Register = () => {
-  const navigate = useNavigate;
+  const navigate = useNavigate();
 
   const [input, setInput] = useState({
     name: "",
@@ -69,7 +69,7 @@ const Register = () => {
 
           <div className="form__subtitle-p">
             <p>Have already an account?</p>
-            <Link className="form__subtitle-link" to={`/loging`}>
+            <Link className="form__subtitle-link" to={`/login`}>
               Login here
             </Link>
           </div>

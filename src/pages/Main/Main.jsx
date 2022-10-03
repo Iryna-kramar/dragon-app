@@ -11,8 +11,6 @@ const Main = () => {
     fetchDragonsData();
   }, []);
 
-  // console.log(images[0], "d");
-
   return (
     <div className="app__wrapper" id="home">
       <div className="app__list">

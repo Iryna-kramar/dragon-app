@@ -8758,6 +8758,7 @@ webpack-manifest-plugin@^4.0.2:
   dependencies:
     tapable "^2.0.0"
     webpack-sources "^2.2.0"
+    
 
 webpack-sources@^1.4.3:
   version "1.4.3"

@@ -31,6 +31,7 @@
   font-size: 16px;
 
   color: var(--color-gray);
+  padding: 10px;
 }
 
 .form__subtitle-p {
@@ -52,11 +53,12 @@
 input {
   border: none;
   border-bottom: solid rgb(143, 143, 143) 1px;
+  font-family: var(--font-base);
 
-  margin-bottom: 30px;
+  margin: 0 auto 30px 10px;
 
   background: none;
-  color: rgba(255, 255, 255, 0.555);
+  color: var(--color-gray);
 
   height: 35px;
   width: 300px;
